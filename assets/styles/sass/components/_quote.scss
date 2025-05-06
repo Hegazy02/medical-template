@@ -1,0 +1,72 @@
+// Quote Section
+.quote {
+  background-color: $secondary-color;
+
+  &__body {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 80px 0;
+
+    &__para {
+      position: relative;
+      line-height: 1.7rem;
+
+      &::before {
+        position: absolute;
+        content: "\201C";
+        left: -50px;
+        top: 0;
+        font-size: 3rem;
+
+        @include breakPoint(desktop) {
+          left: -15px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "\201D";
+        color: white;
+        right: -50px;
+        bottom: -40px;
+        font-size: 3rem;
+
+        @include breakPoint(desktop) {
+          right: -15px;
+        }
+      }
+    }
+
+    &__author {
+      &::before {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 2.5px;
+        margin: auto;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__icon {
+      font-size: 3rem;
+      border: 2px solid white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      line-height: 70px;
+    }
+
+    @include breakPoint(desktop) {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+  }
+}

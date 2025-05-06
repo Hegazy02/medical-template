@@ -1,0 +1,55 @@
+// Departments Section
+.departments {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 40px;
+    padding-left: 20px;
+
+    &__cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @include breakPoint(largeDesktop) {
+        justify-content: space-around;
+        flex-direction: column;
+      }
+    }
+
+    &__card {
+      display: flex;
+      gap: 30px;
+      width: 32%;
+
+      &__img {
+        width: 2.7rem;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &__heading {
+          font-weight: 600;
+          letter-spacing: -0.05em;
+          line-height: 27px;
+          font-size: 19.6px;
+          color: $primary-color;
+        }
+
+        &__para {
+          color: $light-gray;
+          line-height: 26px;
+        }
+      }
+
+      @include breakPoint(largeDesktop) {
+        width: 100%;
+      }
+    }
+  }
+}

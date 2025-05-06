@@ -1,0 +1,8 @@
+.container {
+  // padding: 3rem 12rem;
+  width: 75%;
+  margin: auto;
+  @media screen and (max-width: 1355px) {
+    width: 95%;
+  }
+}

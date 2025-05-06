@@ -1,0 +1,113 @@
+// Footer Section
+.footer {
+  &__body {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    &__location {
+      &__para {
+        color: $gray;
+        font-size: 0.7em;
+        line-height: 1.8rem;
+        letter-spacing: -0.05em;
+      }
+    }
+
+    &__Opening--Hours {
+      &__para {
+        font-size: 0.8em;
+        line-height: 1.8rem;
+        letter-spacing: -0.05em;
+
+        &__day {
+          display: inline-block;
+          color: $gray;
+          width: 50px;
+        }
+
+        &__colon {
+          display: inline-block;
+          width: 10px;
+        }
+      }
+    }
+
+    &__emergency--cases {
+      &__para {
+        font-size: 1.7em;
+        color: $gray;
+      }
+    }
+
+    &__social--media {
+      &__icons {
+        display: flex;
+        gap: 10px;
+
+        &__facebook a::after {
+          content: "\f39e";
+        }
+
+        &__github a::after {
+          content: "\f09b";
+        }
+
+        &__linkedin a::after {
+          content: "\f0e1";
+        }
+
+        a {
+          font-family: $font-awesome;
+          width: $icon-size;
+          height: $icon-size;
+          color: black;
+          background-color: white;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+
+          &:hover {
+            color: white;
+            background-color: black;
+          }
+        }
+      }
+    }
+
+    @include breakPoint(mobile) {
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px 0;
+
+      > div {
+        width: 45%;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 11.34px;
+    color: $gray;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0;
+    margin-top: 60px;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: $gray;
+      margin-bottom: 20px;
+    }
+  }
+} 

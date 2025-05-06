@@ -1,0 +1,63 @@
+@mixin breakPoint($point) {
+  @if $point == mobile {
+    @media screen and ($mobile-width) {
+      @content;
+    }
+  } @else if $point ==desktop {
+    @media screen and ($desktop-width) {
+      @content;
+    }
+  } @else if $point ==largeDesktop {
+    @media screen and ($large-desktop-width) {
+      @content;
+    }
+  }
+}
+
+@mixin flexCenter($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+//=============Animations=============
+@mixin fadeIn($duration: 2s) {
+  animation: fadeInAnimation ease $duration;
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin fadeSlideUp($duration: 0.3s) {
+  animation: fadeSlideUpAnimation ease $duration;
+  @keyframes fadeSlideUpAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(80px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+@mixin fadeSlideRight($duration: 0.5s, $delay: 0.5s) {
+  animation: fadeSlideRightAnimation ease $duration $delay forwards;
+  opacity: 0;
+
+  @keyframes fadeSlideRightAnimation {
+    0% {
+      transform: translateX(-80px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
