@@ -1,5 +1,6 @@
 // Footer Section
 .footer {
+  $para-font-size: 0.8em;
   &__body {
     color: white;
     display: flex;
@@ -15,7 +16,7 @@
     &__location {
       &__para {
         color: $gray;
-        font-size: 0.7em;
+        font-size: $para-font-size;
         line-height: 1.8rem;
         letter-spacing: -0.05em;
       }
@@ -23,7 +24,7 @@
 
     &__Opening--Hours {
       &__para {
-        font-size: 0.8em;
+        font-size: $para-font-size;
         line-height: 1.8rem;
         letter-spacing: -0.05em;
 
