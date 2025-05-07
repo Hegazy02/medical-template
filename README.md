@@ -13,12 +13,12 @@ medical-template/
 │   │   ├── slides/       # Slider images (medical-slide-1.jpg)
 │   │   └── logo/         # Logo images (logo-medical.png)
 │   ├── styles/           # All styling files
-│   │   ├── scss/        # SASS source files
-│   │   │   ├── abstracts/     # Variables, mixins
-│   │   │   ├── base/          # Reset, typography
-│   │   │   ├── components/    # Component styles
-│   │   │   └── layout/        # Layout styles
-│   │   └── css/         # Compiled CSS
+│   │   ├── sass/        # SASS source files
+│   │       ├── abstracts/     # Variables, mixins
+│   │       ├── base/          # Reset, typography
+│   │       ├── components/    # Component styles
+│   │       └── layout/        # Layout styles
+│   │  
 │   └── js/              # JavaScript files
 └── README.md            # Project documentation
 
